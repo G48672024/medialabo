@@ -1,4 +1,17 @@
 h1 {
-	text-shadow: navy 1px 0 10px;
+	text-shadow: rgb(255, 141, 10) 1px 0 20px;
 	color: #ffffff;
+}
+div#zentai {
+	display: grid;
+	grid-template-columns:  1fr;
+	grid-auto-rows: 200px 200px;
+	grid-gap: 10px;
+}
+div#zentai > div {
+	background-color: #b1e4ff26;
+	padding: 5px;
+}
+.sen{
+    border: thick double  rgb(89, 147, 160);
 }
