@@ -17,15 +17,21 @@ function printDom(data) {
 	let d = document.querySelector('div#result'); 
 	d.insertAdjacentElement('beforeend', l)  */
 
-  u = document.createElement('ul')
+  let a = document.createElement('a');        // 新規要素 a を作成
+  a.setAttribute('div','result');
+  let u = document.createElement('ul');
+  a.insertAdjacentElement('beforeend', u);
 
   l = document.createElement('li');      // 青のli要素を作成して，
   l.textContent = data.timezone;                  // ul要素の中に追加
   u.insertAdjacentElement('beforeend', l);
 
-  l = document.createElement('li');      // 青のli要素を作成して，
-  l.textContent = data.timezone;                  // ul要素の中に追加
+  l = document.createElement('li');     
+  l.textContent = data.name;                 
   u.insertAdjacentElement('beforeend', l);
+
+  p = document.querySelector('span#val_weather');     // p#primary 要素の
+  p.insertAdjacentElement('afterend', u); 
 
 }
 
