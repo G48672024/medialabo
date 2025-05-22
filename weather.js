@@ -11,11 +11,27 @@ console.log(data.weather)
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
 
+ /* let u = document.createElement('ul');
+  let l = document.createElement('li');
+	l.textContent=data.cod; 
+	let d = document.querySelector('div#result'); 
+	d.insertAdjacentElement('beforeend', l)  */
+
+  u = document.createElement('ul')
+
+  l = document.createElement('li');      // 青のli要素を作成して，
+  l.textContent = data.timezone;                  // ul要素の中に追加
+  u.insertAdjacentElement('beforeend', l);
+
+  l = document.createElement('li');      // 青のli要素を作成して，
+  l.textContent = data.timezone;                  // ul要素の中に追加
+  u.insertAdjacentElement('beforeend', l);
+
 }
 
 // 課題5-1 のイベントハンドラの定義
 function show() {
-
+  
 }
 
 // 課題5-1, 6-1 のイベントハンドラ登録処理は以下に記述

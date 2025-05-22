@@ -1,5 +1,8 @@
+body{
+	background-color: #efffff
+}
 h1 {
-	text-shadow: rgb(255, 141, 10) 1px 0 20px;
+	text-shadow: rgb(255, 91, 10) 1px 0 20px;
 	color: #ffffff;
 }
 div#zentai {
@@ -14,4 +17,7 @@ div#zentai > div {
 }
 .sen{
     border: thick double  rgb(89, 147, 160);
+}
+.center-text {
+  text-align: center;
 }

@@ -5,10 +5,15 @@
     <title>My test page</title>
     <link rel="stylesheet" href="project.css">
     <script src="weather.js" defer></script>
+    <style>
+    .center-text {
+      text-align: center;
+    }
+    </style>
   </head>
   <body>
-    <h1>世界の天気</h1>
-    	<p>
+    <h1 class="center-text">世界の天気</h1>
+    	<p class="center-text">
 				<input type="radio" name="kuni" value="2">
 				<label for="kuni2">日本</label>
 				<input type="radio" name="kuni" value="3">
@@ -20,10 +25,10 @@
         <input type="radio" name="kuni" value="6">
 				<label for="kuni6">フランス</label>
 			</p>
-      <button name="kuni" class="kuni">決定</button>
+      <button name="kuni" class="kuni" >決定</button>
 			<span id="val_kuni"></span>
 
-      <p>
+      <p class="center-text">
 				<input type="checkbox" name="weather" value="tenki">
 				<label for="manga">天気</label>
 				<input type="checkbox" name="weather" value="kion">
@@ -39,42 +44,12 @@
         <input type="checkbox" name="weather" value="tosi">
 				<label for="game">都市名</label>
 			</p>
-			<button name="weather" class="multichoice">決定</button>
+			<button name="weather" class="multichoice" >決定</button>
 			<span id="val_weather"></span>
 
 
     <ul>
-      <div class="sen">
-        <li>天気：晴れ</li>
-      </div>
-
-      <div class="sen">
-        <li>最低気温：6.4</li>
-      </div>
-
-      <div class="sen">
-        <li>最高気温：24.6</li>
-      </div>
-
-      <div class="sen">
-        <li>湿度：32%</li>
-      </div>
-
-      <div class="sen">
-        <li>風速：1.6</li>
-      </div>
-
-      <div class="sen">
-        <li>風向：南</li>
-      </div>
-
-      <div class="sen">
-        <li>降水確率：0</li>
-      </div>
-
-      <div class="sen">
-        <li>都市名：八王子</li>
-      </div>
+      <div id="result"></div>
     </ul>
     <p>表のようにして、ここが天気の項目だと一目でわかるように図などを入れたい</p>
   </body>
