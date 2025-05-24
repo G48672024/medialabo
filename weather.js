@@ -30,6 +30,18 @@ function printDom(data) {
   l.textContent = data.name;                 
   u.insertAdjacentElement('beforeend', l);
 
+  l = document.createElement('li');     
+  l.textContent = data.coord.lon;                 
+  u.insertAdjacentElement('beforeend', l);
+
+  l = document.createElement('li');     
+  l.textContent = data.coord.lat;                 
+  u.insertAdjacentElement('beforeend', l);
+
+  l = document.createElement('li');     
+  l.textContent = data.weather[0].main;                 
+  u.insertAdjacentElement('beforeend', l);
+
   p = document.querySelector('span#val_weather');     // p#primary 要素の
   p.insertAdjacentElement('afterend', u); 
 
