@@ -2,8 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>My test page</title>
+    <title>世界の天気</title>
     <link rel="stylesheet" href="project.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <script src="weather.js" defer></script>
     <style>
     .center-text {
@@ -14,38 +15,48 @@
   <body>
     <h1 class="center-text">世界の天気</h1>
     	<p class="center-text">
-				<input type="radio" name="kuni" value="2">
-				<label for="kuni2">日本</label>
-				<input type="radio" name="kuni" value="3">
-				<label for="kuni3">北京</label>
-        <input type="radio" name="kuni" value="4">
-				<label for="kuni4">アメリカ</label>
-				<input type="radio" name="kuni" value="5">
-				<label for="kuni5">フランス</label>
-        <input type="radio" name="kuni" value="6">
-				<label for="kuni6">フランス</label>
+				<input type="radio" name="kuni" value="1850147">
+				<label for="nihon">東京(日本)</label>
+				<input type="radio" name="kuni" value="1816670">
+				<label for="pekin">北京</label>
+        		<input type="radio" name="kuni" value="360630">
+				<label for="kairo">カイロ</label>
+				<input type="radio" name="kuni" value="2968815">
+				<label for="pari">パリ</label>
+        		<input type="radio" name="kuni" value="524901">
+				<label for="mosu"> モスクワ</label><br>
+				<input type="radio" name="kuni" value="993800">
+				<label for="yoha">ヨハネスブルク</label>
+				<input type="radio" name="kuni" value="2147714">
+				<label for="sidoni">シドニー</label>
+				<input type="radio" name="kuni" value="2643743">
+				<label for="rondon">ロンドン</label>
+				<input type="radio" name="kuni" value="3451189">
+				<label for="rio">リオデジャネイロ</label>
+				<input type="radio" name="kuni" value="5128581">
+				<label for="nyu">ニューヨーク</label>
 			</p>
-      <button name="kuni" class="kuni" >決定</button>
-			<span id="val_kuni"></span>
 
       <p class="center-text">
-				<input type="checkbox" name="weather" value="tenki">
-				<label for="manga">天気</label>
-				<input type="checkbox" name="weather" value="kion">
-				<label for="anime">気温</label>
-				<input type="checkbox" name="weather" value="situdo">
-				<label for="game">湿度</label>
-        <input type="checkbox" name="weather" value="huusoku">
-				<label for="manga">風速</label>
-				<input type="checkbox" name="weather" value="kazamuki">
-				<label for="anime">風向</label>
-				<input type="checkbox" name="weather" value="kousui">
-				<label for="game">降水確率</label>
-        <input type="checkbox" name="weather" value="tosi">
-				<label for="game">都市名</label>
+				<input type="checkbox" name="weather" value="weather.description">
+				<label for="tenki">天気</label>
+				<input type="checkbox" name="weather" value="name">
+				<label for="name">都市名</label>
+				<input type="checkbox" name="weather" value="main.temp_max">
+				<label for="max">最高気温</label>
+				<input type="checkbox" name="weather" value="main.temp_min">
+				<label for="min">最低気温</label>
+				<input type="checkbox" name="weather" value="main.humidity">
+				<label for="situdo">湿度</label>
+        		<input type="checkbox" name="weather" value="wind.speed">
+				<label for="speed">風速</label>
+				<input type="checkbox" name="weather" value="wind.deg">
+				<label for="deg">風向</label>
+        		
 			</p>
-			<button name="weather" class="multichoice" >決定</button>
-			<span id="val_weather"></span>
+			<p style="text-align: center; ">
+ 			<button id="sendRequest">決定</button>
+			</p>
+			<span id="val_weather"></span><br>
 
-    <p>表のようにして、ここが天気の項目だと一目でわかるように図などを入れたい</p>
   </body>

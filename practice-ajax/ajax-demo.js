@@ -4,8 +4,11 @@ b.addEventListener('click', sendRequest);
 
 // 通信を開始する処理
 function sendRequest() {
+	let url1 ='https://www.nishita-lab.org/web-contents/jsons/';
+	let url2 ='.json';
+	let x = 'test';
 	// URL を設定
-	let url = 'https://www.nishita-lab.org/web-contents/jsons/test.json';
+	let url = (url1 + x + url2);
 
 	// 通信開始
 	axios.get(url)
@@ -22,6 +25,7 @@ function showResult(resp) {
 	// data が文字列型なら，オブジェクトに変換する
 	if (typeof data === 'string') {
 		data = JSON.parse(data);
+		
 	}
 
 	// data をコンソールに出力
