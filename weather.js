@@ -13,13 +13,7 @@ console.log(data.weather)
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
-
- /* let u = document.createElement('ul');
-  let l = document.createElement('li');
-	l.textContent=data.cod; 
-	let d = document.querySelector('div#result'); 
-	d.insertAdjacentElement('beforeend', l)  */
-
+  
   let a = document.createElement('a');     
   a.setAttribute('div','result');
   let u = document.createElement('ul');
